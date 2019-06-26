@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/content_map" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="普通地图"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <CheckBox
+                android:id="@+id/cb_wx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="卫星地图" />
+
+            <CheckBox
+                android:id="@+id/cb_rlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="热力图" />
+
+            <CheckBox
+                android:id="@+id/cb_jt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="交通图" />
+        </LinearLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/search_edt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/search_btn"
+            android:gravity="center_vertical"
+            android:hint="搜索目的地"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="#1d1d1d"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
